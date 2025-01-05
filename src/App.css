@@ -1,0 +1,299 @@
+/* General container styling */
+
+button {
+  color: black !important;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: cursive, Brush Script MT;
+}
+
+/* User details section */
+.user-details {
+  width: 35%;
+  background-color: #815c05;
+  padding: 20px;
+  border-right: 3px solid rgba(200, 200, 200, 0.5);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.user-info-box {
+  background-color: #068c44;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.user-info-box p {
+  margin: 0;
+}
+
+.logout-button {
+  background-color: #815c05;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #5e3e02;
+}
+
+/* Feature buttons */
+.feature-buttons button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  background-color: #068c44;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feature-buttons button:hover {
+  background-color: #04532e;
+}
+
+/* Add clothing menu */
+.add-clothing-menu label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.add-clothing-menu select {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-clothing-menu input {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.color-swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+}
+
+/* Digital closet section */
+.closet {
+  width: 65%;
+  margin-left: 35%;
+  padding: 20px;
+  text-align: center;
+}
+
+.closet-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.closet-title span {
+  width: calc(100% - 100px); /* Adjust width to match buttons */
+  background-color: #815c05;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Dropdown and clothing items */
+.dropdown {
+  margin-bottom: 20px;
+}
+
+.dropdown button {
+  background-color: #068c44;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown button:hover {
+  background-color: #04532e;
+}
+
+.dropdown-content {
+  background-color: #815c05; /* Matching brown color */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.clothing-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+}
+
+.clothing-item p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.clothing-item {
+  border: 2px solid transparent;
+  transition: border 0.2s ease;
+}
+
+.clothing-item:hover {
+  border-color: #007bff; /* Highlight on hover */
+}
+.clothing-item.selecting-outfit {
+  border: 2px solid blue;
+}
+
+.clothing-item.remove-mode {
+  border-color: red; /* Red border in Remove Mode */
+}
+
+.clothing-item.dirty-mode {
+  border-color: orange; /* Orange border in Make Dirty Mode */
+}
+.clothing-item .icon {
+  width: 70px;
+  height: 70px;
+}
+
+.clothing-item .description {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.status-button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.status-button.clean {
+  background-color: #4caf50; /* Green for clean */
+  color: white;
+}
+
+.status-button.dirty {
+  background-color: #f44336; /* Red for dirty */
+  color: white;
+}
+
+.status-button:hover {
+  opacity: 0.9;
+}
+
+.icon-swatch {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.icon-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.icon-options img {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+.icon-options img:hover {
+  transform: scale(1.1);
+  border-color: black;
+}
+
+.selected-outfit {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.selected-outfit h3 {
+  text-align: center;
+  color: #333;
+}
+
+.outfit-category {
+  margin-top: 10px;
+}
+
+.outfit-category h4 {
+  text-align: left;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.outfit-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.outfit-items .clothing-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80px;
+}
